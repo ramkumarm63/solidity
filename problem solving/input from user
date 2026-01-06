@@ -1,0 +1,7 @@
+grts an input
+    string public  name;
+    int public  age;
+    function details(string memory _name,int _age)public   returns(string memory,int){
+name=_name;
+age=_age;
+    }
