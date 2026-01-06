@@ -1,0 +1,14 @@
+function modifier
+address owner;
+
+constructor(){
+    owner = msg.sender;
+}
+
+modifier onlyowner{
+    require(msg.sender==owner,"ur not owner");
+    _;
+}
+function check()public  view onlyowner returns(string memory){
+    return  "ramkumar";
+}
