@@ -1,0 +1,8 @@
+---
+modifier  check(uint x){
+    require(x>10,"x should be greaater than 10");
+_;}
+
+function val(uint x)public  check(x)  returns(uint){
+    return  x;
+}
