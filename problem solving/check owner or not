@@ -1,0 +1,15 @@
+----
+address public  owner;
+uint public totalbalancee;
+
+constructor(){
+    owner=msg.sender;
+}
+
+modifier ownerdeposit{
+    require(msg.sender ==owner,"not an owner");
+_;}
+
+function deposit()public payable ownerdeposit{
+    totalbalancee += msg.value;
+}
