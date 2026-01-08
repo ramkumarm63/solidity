@@ -1,0 +1,9 @@
+pragma solidity ^0.8.0;
+
+contract BalanceTracker {
+    mapping(address => uint) public balance;
+
+    function addBalance(uint amount) public {
+        balance[msg.sender] += amount;
+    }
+}
