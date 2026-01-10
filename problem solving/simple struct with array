@@ -1,0 +1,10 @@
+contract Ram{
+struct person{
+string name;
+int age;
+}
+person[] public Person;
+function updateperson(string memory _name,int _age)public {
+    Person.push(person(_name,_age));
+}
+}
