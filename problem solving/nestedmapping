@@ -1,0 +1,12 @@
+
+mapping(string=>mapping (string => uint)) bookprice;
+
+function bookinfo(string memory _author,string memory _name,uint _amount) public {
+    bookprice[_author][_name]=  _amount;
+} 
+
+function getprice(string memory _author,string memory _name) public view  returns(uint){
+return  bookprice[_author][_name];
+
+}
+} 
