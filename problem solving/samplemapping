@@ -1,0 +1,18 @@
+   
+
+contract amount {
+  
+mapping(address=>uint)public bal;
+
+function deposit(uint amount)public {
+    bal[msg.sender] += amount;
+}
+
+function withdraw(uint amount)public {
+        require(bal[msg.sender]>=amount,"need require amount");
+bal[msg.sender] -= amount;
+}
+
+function check(address user)public view returns(uint){
+    return  bal[user];
+}
